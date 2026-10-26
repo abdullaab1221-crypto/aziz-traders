@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #071426;
+  --color-royal: #102747;
+  --color-deepblue: #17385c;
+  --color-gold: #c6a15b;
+  --color-champagne: #e7cf96;
+  --color-warmgold: #f5e5b8;
+  --color-marble: #faf9f6;
+  --color-charcoal: #171b22;
+  --color-slate: #778397;
+
+  --font-display: var(--font-serif-display), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-interface), "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --at-gold-gradient: linear-gradient(135deg, #c6a15b 0%, #f5e5b8 50%, #c6a15b 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--color-marble);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+.gold-text {
+  background: var(--at-gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c6a15b, transparent);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #c6a15b, #e7cf96);
+  color: #071426;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(198, 161, 91, 0.35);
+}
+
+.btn-outline-gold {
+  border: 1px solid #c6a15b;
+  color: #e7cf96;
+  letter-spacing: 0.08em;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.btn-outline-gold:hover {
+  background: #c6a15b;
+  color: #071426;
+}
+
+.card-elevated {
+  box-shadow: 0 1px 2px rgba(7, 20, 38, 0.06), 0 12px 32px -12px rgba(7, 20, 38, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-elevated:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 4px rgba(7, 20, 38, 0.08), 0 24px 48px -16px rgba(7, 20, 38, 0.25);
+}
+
+.marble-surface {
+  background:
+    radial-gradient(1200px 400px at 10% -10%, rgba(198, 161, 91, 0.07), transparent 60%),
+    radial-gradient(900px 500px at 110% 20%, rgba(16, 39, 71, 0.06), transparent 55%),
+    #faf9f6;
+}
+
+.navy-surface {
+  background:
+    radial-gradient(900px 400px at 15% 0%, rgba(198, 161, 91, 0.10), transparent 60%),
+    linear-gradient(160deg, #071426 0%, #102747 55%, #17385c 100%);
+}
+
+.hero-marble {
+  background:
+    radial-gradient(1100px 520px at 88% 28%, rgba(198, 161, 91, 0.14), transparent 55%),
+    radial-gradient(760px 620px at 8% 95%, rgba(16, 39, 71, 0.65), transparent 62%),
+    radial-gradient(420px 320px at 32% 12%, rgba(231, 207, 150, 0.06), transparent 70%),
+    linear-gradient(152deg, #0a1526 0%, #071426 46%, #0b1a2f 100%);
+}
+
+.hairline {
+  border-color: rgba(198, 161, 91, 0.35);
+}
+
+.marquee-track {
+  animation: marquee 32s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

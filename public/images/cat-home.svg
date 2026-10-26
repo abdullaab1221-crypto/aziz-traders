@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#0E1E33"/><stop offset="100%" stop-color="#071426"/>
+</linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#C6A15B"/><stop offset="50%" stop-color="#F5E5B8"/><stop offset="100%" stop-color="#C6A15B"/>
+</linearGradient>
+<radialGradient id="shade" cx="0.5" cy="0.35" r="0.75">
+<stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="800" height="800" fill="url(#bg)"/>
+<rect width="800" height="800" fill="url(#shade)"/>
+<ellipse cx="400" cy="660" rx="240" ry="34" fill="#071426" opacity="0.10"/>
+<g transform="translate(400 420)"><path d="M-50 -230 Q-20 -210 -28 -170 Q-130 -80 -112 60 Q-96 190 0 200 Q96 190 112 60 Q130 -80 28 -170 Q20 -210 50 -230 Z" fill="#FAF9F6" stroke="#778397" stroke-width="4"/><path d="M-44 -160 Q0 -130 44 -160" fill="none" stroke="url(#gold)" stroke-width="6"/><path d="M-80 30 Q0 80 80 20" fill="none" stroke="#C6A15B" stroke-width="3" opacity="0.6"/></g>
+</svg>
